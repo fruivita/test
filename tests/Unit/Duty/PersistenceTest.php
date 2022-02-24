@@ -11,7 +11,7 @@ test('cadastra múltiplas duties (funções)', function () {
         ->create();
 
     expect(Duty::count())->toBe($amount);
-})->only();
+});
 
 test('duty (função) name em seu tamanho máximo é aceito', function () {
     Duty::factory()->create(['name' => Str::random(255)]);

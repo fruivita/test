@@ -44,6 +44,10 @@ class TestCase extends Orchestra
         $table->up();
         $table = include __DIR__ . '/../database/migrations/create_departments_table.php.stub';
         $table->up();
+        $table = include __DIR__ . '/../database/migrations/create_occupations_table.php.stub';
+        $table->up();
+        $table = include __DIR__ . '/../database/migrations/create_persons_table.php.stub';
+        $table->up();
         // foreach ($files as $file) {
         //     $table = include $file;
         // }

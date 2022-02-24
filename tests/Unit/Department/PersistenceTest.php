@@ -11,7 +11,7 @@ test('cadastra múltiplas departments (lotações)', function () {
         ->create();
 
     expect(Department::count())->toBe($amount);
-})->only();
+});
 
 test('campo do department (lotação) em seu tamanho máximo é aceito', function ($field, $length) {
     Department::factory()->create([$field => Str::random($length)]);
