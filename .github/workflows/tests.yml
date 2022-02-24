@@ -46,8 +46,8 @@ jobs:
       - name: Setup MySql
         run: |
           sudo systemctl start mysql.service
-          mysql -e 'CREATE DATABASE package;' -uroot -proot
-          mysql -e 'SHOW DATABASES;' -uroot -proot
+          mysql -e 'CREATE DATABASE package;' -uroot root -proot root
+          mysql -e 'SHOW DATABASES;' -uroot root -proot root
           mysql -V
 
       - name: Cache dependencies
