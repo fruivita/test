@@ -39,17 +39,12 @@ class TestCase extends Orchestra
     {
         Schema::dropAllTables();
 
-        $files = glob(__DIR__ . '/../database/migrations/*.php.stub', GLOB_NOSORT);
-        $table = include __DIR__ . '/../database/migrations/create_duties_table.php.stub';
-        $table->up();
-        $table = include __DIR__ . '/../database/migrations/create_departments_table.php.stub';
-        $table->up();
-        $table = include __DIR__ . '/../database/migrations/create_occupations_table.php.stub';
-        $table->up();
-        $table = include __DIR__ . '/../database/migrations/create_persons_table.php.stub';
-        $table->up();
-        // foreach ($files as $file) {
-        //     $table = include $file;
-        // }
+        $files = glob(__DIR__ . '/../database/migrations/*.php.stub');
+
+        foreach ($files as $file) {
+            $table = include $file;
+
+            $table->up();
+        }
     }
 }
