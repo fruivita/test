@@ -46,8 +46,6 @@ class TestCase extends Orchestra
         $table->up();
         // foreach ($files as $file) {
         //     $table = include $file;
-
-            // $table->up();
         // }
     }
 }
