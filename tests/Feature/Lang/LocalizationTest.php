@@ -11,7 +11,7 @@ test('exception com mensagem default em inglês', function () {
     $exception = new FileNotReadableException();
 
     expect($exception->getMessage())->toBe('The file entered could not be read!');
-});
+})->only();
 
 test('exception com mensagem default em português alterando o locale', function () {
     App::setLocale('pt-br');
@@ -19,4 +19,4 @@ test('exception com mensagem default em português alterando o locale', function
     $exception = new FileNotReadableException();
 
     expect($exception->getMessage())->toBe('O arquivo informado não pôde ser lido!');
-});
+})->only();
