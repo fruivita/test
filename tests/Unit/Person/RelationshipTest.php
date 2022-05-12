@@ -43,7 +43,7 @@ test('lança exceção ao tentar definir relacionamento inválido', function ($f
         fn () => Person::factory()->create([$field => $value])
     )->toThrow(QueryException::class, $message);
 })->with([
-    ['occupation_id', 10, 'Cannot add or update a child row'], //inexistente
-    ['duty_id',       10, 'Cannot add or update a child row'], //inexistente
-    ['department_id', 10, 'Cannot add or update a child row'], //inexistente
+    ['occupation_id', 10, 'Cannot add or update a child row'], // inexistente
+    ['duty_id',       10, 'Cannot add or update a child row'], // inexistente
+    ['department_id', 10, 'Cannot add or update a child row'], // inexistente
 ]);
