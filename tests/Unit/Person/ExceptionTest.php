@@ -21,7 +21,7 @@ test('lança exceção ao tentar cadastrar person (pessoa) com campo inválido',
         fn () => Person::factory()->create([$field => $value])
     )->toThrow(QueryException::class, $message);
 })->with([
-    ['name',     Str::random(256), 'Data too long for column'], //campo aceita no máximo 255 caracteres
-    ['username', Str::random(21),  'Data too long for column'], //campo aceita no máximo 20 caracteres
-    ['username', null,             'cannot be null'],           //campo obrigatório
+    ['name',     Str::random(256), 'Data too long for column'], // campo aceita no máximo 255 caracteres
+    ['username', Str::random(21),  'Data too long for column'], // campo aceita no máximo 20 caracteres
+    ['username', null,             'cannot be null'],           // campo obrigatório
 ]);
